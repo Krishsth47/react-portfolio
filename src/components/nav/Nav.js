@@ -1,8 +1,9 @@
 import React from "react";
 import "./nav.css";
 import { FaHome, FaRegUser } from "react-icons/fa";
-import { GrContact, GrProjects } from "react-icons/gr";
+import { GrContact } from "react-icons/gr";
 import { GiBookCover } from "react-icons/gi";
+import { VscFolderLibrary } from "react-icons/vsc";
 
 import { useState } from "react";
 
@@ -37,7 +38,7 @@ const Nav = () => {
         onClick={() => setActiveNav("#projects")}
         className={activeNav === "#projects" ? "active" : ""}
       >
-        <GrProjects />
+        <VscFolderLibrary />
       </a>
       <a
         href="#contact"
