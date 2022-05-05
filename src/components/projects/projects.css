@@ -32,7 +32,7 @@
   margin-bottom: 1rem;
 }
 
-img {
+.portfolio__item-image {
   height: 200px;
   width: 200;
 }
