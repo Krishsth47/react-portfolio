@@ -32,8 +32,71 @@ header {
 .header__socials::after {
   content: "";
   width: 1px;
-  height: 2rem;
+  height: 3rem;
   background: var(--color-primary);
+}
+
+/* =====scroll effect======*/
+.scroll {
+  color: rgba(255, 255, 255, 0.8);
+
+  height: 70px;
+  width: 30px;
+  border: 1px ridge white;
+  opacity: 0.5;
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll:hover {
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
+}
+
+.scroll::before,
+.scroll::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid red;
+  background-color: red;
+  height: 5px;
+  width: 5px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: scroll 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.6;
+    border-radius: 50%;
+  }
+  60% {
+    opacity: 1;
+    top: 90%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 0;
+    background-color: transparent;
+    border-top: transparent;
+    border-left: transparent;
+  }
+  100% {
+    opacity: 1;
+    top: 80%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 0;
+    background-color: transparent;
+    border-top: transparent;
+    border-left: transparent;
+  }
 }
 
 /* ====== ME ====== */
@@ -51,7 +114,7 @@ header {
 }
 
 /* ====== SCROLL DOWN ====== */
-.scroll__down {
+.scroll-text {
   position: absolute;
   right: -2.3rem;
   bottom: 5rem;
